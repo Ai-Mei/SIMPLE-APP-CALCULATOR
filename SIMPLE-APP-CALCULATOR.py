@@ -1,68 +1,82 @@
+def process():
 # Ask for user's 2 input numbers.
-num_1 = input("Enter the first number: ")
-try:
+    num_1 = input("Enter the first number: ")
+    try:
 # Convert the input into float data type.
-    float_value = float(num_1)
+        float_value = float(num_1)
 # Check if the input is an integer
-    if float_value.is_integer():
+        if float_value.is_integer():
 # If yes, convert the input to an integer
-        int_value = int(float_value)
-        num_1 = int_value
-    else:
-        num_1 = float_value
-except ValueError:
+            int_value = int(float_value)
+            num_1 = int_value
+        else:
+            num_1 = float_value
+    except ValueError:
 # Else, if theinput is neither integer nor float, print an error message.
-    print("Invalid input. Please enter a valid number.")
+        print("Invalid input. Please enter a valid number.")
 
-num_2 = input("Enter the second number: ")
-try:
+    num_2 = input("Enter the second number: ")
+    try:
 # Convert the input into float data type.
-    float_value = float(num_2)
+        float_value = float(num_2)
 # Check if the input is an integer
-    if float_value.is_integer():
+        if float_value.is_integer():
 # If yes, convert the input to an integer
-        int_value = int(float_value)
-        num_2 = int_value
-    else:
-        num_1 = float_value
-except ValueError:
+            int_value = int(float_value)
+            num_2 = int_value
+        else:
+            num_1 = float_value
+    except ValueError:
 # Else, if theinput is neither integer nor float, print an error message.
-    print("Invalid input. Please enter a valid number.")
+        print("Invalid input. Please enter a valid number.")
 
 # Ask for user's input for operation.
-while True:
-    operation = input("\nPlease select an operation to perform + for addition, - for subtraction, * for multiplication, / for division: ")
+    while True:
+        operation = input("\nPlease select an operation to perform + for addition, - for subtraction, * for multiplication, / for division: ")
     # If the user's input for operation is +, add the 2 input numbers.
-    if operation == "+":
-        answer = num_1 + num_2
-        print("\nThe sum of the 2 numbers: " , answer , "\n")
-        break
+        if operation == "+":
+            answer = num_1 + num_2
+            print("\nThe sum of the 2 numbers: " , answer , "\n")
+            break
     # If the user's input for operation is -, subtract the second number from the first number.
-    if operation == "-":
-        answer = num_1 - num_2
-        print("\nThe difference of the 2 numbers: " , answer , "\n")
-        break
+        if operation == "-":
+            answer = num_1 - num_2
+            print("\nThe difference of the 2 numbers: " , answer , "\n")
+            break
     # If the user's input for operation is *, multiply the first and second input numbers.
-    if operation == "*":
-        answer = num_1 * num_2
-        print("\nThe product of the 2 numbers: " , answer , "\n")
-        break
+        if operation == "*":
+            answer = num_1 * num_2
+            print("\nThe product of the 2 numbers: " , answer , "\n")
+            break
     # If the user's input for operation is /, divide the first input number by the second input number.
-    if operation == "/":
-        try:
-            answer = num_1 / num_2
-            print("\nThe quotient of the 2 numbers: " , answer ,"\n")
-            break
-        except ZeroDivisionError:
-            print("Error, the number is divided by 0.\n")
-            break
+        if operation == "/":
+            try:
+                answer = num_1 / num_2
+                print("\nThe quotient of the 2 numbers: " , answer ,"\n")
+                break
+            except ZeroDivisionError:
+                print("Error, the number is divided by 0.\n")
+                break
+        else:
+            print("Sorry, invalid input for opration\n")
+            continue
+process()
+# Ask the user if they need to use the calculator again.
+while True:
+    decision = input("Do you want to do more calculations?  Type Yes or No: ")
+    print()
+    # If yes, repeat the process.
+    if decision.lower() == "yes":
+        process()
+    # Else, if no, end the program.
+    elif decision.lower() == "no":
+        print("Process done.")
+        break
+    # When the input is neither yes nor no, print a message and ask again.
     else:
-        print("Sorry, invalid input for opration\n")
+        print("Please type in only Yes or No.")
         continue
 
-
-# Ask the user if they need to use the calculator again.
-# If yes, repeat the process.
 # Else, if no, end the program.
 
 
