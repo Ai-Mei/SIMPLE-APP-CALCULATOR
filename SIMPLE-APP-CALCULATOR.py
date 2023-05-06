@@ -1,34 +1,40 @@
 def process():
 # Ask for user's 2 input numbers.
-    num_1 = input("Enter the first number: ")
-    try:
+    while True:
+        num_1 = input("Enter the first number: ")
+        try:
 # Convert the input into float data type.
-        float_value = float(num_1)
+            float_value = float(num_1)
 # Check if the input is an integer
-        if float_value.is_integer():
+            if float_value.is_integer():
 # If yes, convert the input to an integer
-            int_value = int(float_value)
-            num_1 = int_value
-        else:
-            num_1 = float_value
-    except ValueError:
+                int_value = int(float_value)
+                num_1 = int_value
+            else:
+                num_1 = float_value
+            break
+        except ValueError:
 # Else, if theinput is neither integer nor float, print an error message.
-        print("Invalid input. Please enter a valid number.")
+            print("Invalid input. Please enter a valid number.")
+            continue
 
-    num_2 = input("Enter the second number: ")
-    try:
+    while True:
+        num_2 = input("Enter the second number: ")
+        try:
 # Convert the input into float data type.
-        float_value = float(num_2)
+            float_value = float(num_2)
 # Check if the input is an integer
-        if float_value.is_integer():
+            if float_value.is_integer():
 # If yes, convert the input to an integer
-            int_value = int(float_value)
-            num_2 = int_value
-        else:
-            num_1 = float_value
-    except ValueError:
+                int_value = int(float_value)
+                num_2 = int_value
+            else:
+                num_2 = float_value
+            break
+        except ValueError:
 # Else, if theinput is neither integer nor float, print an error message.
-        print("Invalid input. Please enter a valid number.")
+            print("Invalid input. Please enter a valid number.")
+            continue
 
 # Ask for user's input for operation.
     while True:
