@@ -88,7 +88,7 @@ def process():
                 print("Error, the number is divided by 0.\n")
                 break
         else:
-            print("Sorry, invalid input for opration\n")
+            print("\033[0m\033[0;101m\033[1;30m⚠️   Sorry, invalid input for opration\033[0m\n")
             continue
 process()
 # Ask the user if they need to use the calculator again.
