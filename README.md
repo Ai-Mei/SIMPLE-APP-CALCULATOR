@@ -33,7 +33,7 @@ This program asks the user for 2 input numbers (in order). Then the program will
 >https://drive.google.com/file/d/1DPjH4KJgdlepcFa6cJTdXORglvF6HCiz/view?usp=sharing
 
 
-Happy calcutating!
+Happy calculating!
 
 
 If you have any inquiries, you may send me an email.
